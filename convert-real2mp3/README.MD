@@ -1,6 +1,8 @@
 # Real Audio to MP3 Converter
 
-`convert-real2mp3.py` is a straightforward Python script designed to convert Real Audio files (`.ra`, `.rm`) into MP3 format efficiently.
+`convert_real_to_mp3.py` is a straightforward Python script designed to convert Real Audio files (`.ra`, `.rm`) into MP3 format efficiently.
+
+---
 
 ## Features
 
@@ -8,17 +10,23 @@
 * Output MP3 files encoded at 192 kbps bitrate.
 * Automatically processes all compatible files within the specified directory.
 
+---
+
 ## Requirements
 
 * Python 3.x
 * pydub (`pip install pydub`)
 * FFmpeg installed and accessible from the command line ([Download FFmpeg](https://ffmpeg.org/download.html))
 
+---
+
 ## Installation
 
 Install required Python packages:
 
+```bash
 pip install pydub
+```
 
 Ensure FFmpeg is installed and added to your system's PATH.
 
@@ -50,12 +58,14 @@ Converted MP3 files will be saved to:
 
 Ensure the following directory structure is in place:
 
+```
 .
 ├── convert_real_to_mp3.py
 ├── real_audio_files/
 │   ├── example.ra
 │   └── example.rm
 └── mp3_files/
+```
 
 ---
 
