@@ -1,74 +1,72 @@
 # Real Audio to MP3 Converter
 
-`convert_real_to_mp3.py` is a straightforward Python script designed to convert Real Audio files (`.ra`, `.rm`) into MP3 format efficiently.
+`convert_real_to_mp3.py` is a simple, efficient Python script that converts RealAudio files (`.ra`, `.rm`) into standard MP3 format while preserving their original bitrate. This avoids wasting space when converting low-quality source files.
 
 ---
 
-## Features
+## 🔧 Features
 
-* **Convert Real Audio files** (`.ra`, `.rm`) into MP3.
-* Output MP3 files encoded at 192 kbps bitrate.
-* Automatically processes all compatible files within the specified directory.
-
----
-
-## Requirements
-
-* Python 3.x
-* pydub (`pip install pydub`)
-* FFmpeg installed and accessible from the command line ([Download FFmpeg](https://ffmpeg.org/download.html))
+- Batch convert `.ra` and `.rm` files to `.mp3`
+- Automatically detects and preserves the original bitrate (via `ffprobe`)
+- Falls back to 192 kbps when bitrate is unavailable
+- Skips files that fail to convert, with clear error messages
 
 ---
 
-## Installation
+## 📦 Requirements
 
-Install required Python packages:
+- Python 3.x
+- [pydub](https://github.com/jiaaro/pydub)
+- [FFmpeg](https://ffmpeg.org/) (must be installed and added to your system's PATH)
+
+To install the required Python package:
 
 ```bash
 pip install pydub
 ```
 
-Ensure FFmpeg is installed and added to your system's PATH.
-
 ---
 
-## Usage
+## 📁 Folder Structure
 
-Place your Real Audio files (`.ra`, `.rm`) into the directory:
+Make sure the following directories exist:
 
-```
-./real_audio_files
-```
-
-Run the script:
-
-```bash
-python convert_real_to_mp3.py
-```
-
-Converted MP3 files will be saved to:
-
-```
-./mp3_files
-```
-
----
-
-## Directory Structure
-
-Ensure the following directory structure is in place:
-
-```
+````markdown
 .
 ├── convert_real_to_mp3.py
 ├── real_audio_files/
-│   ├── example.ra
-│   └── example.rm
+│   ├── file1.ra
+│   └── file2.rm
 └── mp3_files/
 ```
 
 ---
 
-## License
+## 🚀 Usage
 
-This tool is provided under the Creative Commons CC0 1.0 Universal (CC0 1.0) Public Domain Dedication. You may freely modify, distribute, and use this script without any restrictions.
+1. Place your `.ra` and `.rm` files inside the `real_audio_files/` directory.
+
+2. Run the script:
+
+```bash
+python convert_real_to_mp3.py
+```
+
+3. Converted .mp3 files will be saved in the mp3_files/ directory, using the same base filename.
+
+---
+
+## ❗ Notes
+
+- The script enforces a minimum MP3 bitrate of **32 kbps** for compatibility.
+- If the source bitrate cannot be detected, it defaults to **192 kbps**.
+- Bitrate is extracted using `ffprobe` (included with FFmpeg).
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+You are free to use, modify, and distribute this script for personal or commercial purposes, provided that the original copyright
+and license notice are included in all copies or substantial portions of the software.
