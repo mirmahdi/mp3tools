@@ -17,8 +17,11 @@ Export and import MP3 ID3 metadata to/from a CSV file.
 Convert RealAudio (`.ra`, `.rm`) files into standard `.mp3` format using `pydub` and FFmpeg.
 
 - Auto-processes a folder of RealAudio files.
-- Converts to 192 kbps MP3 with simple usage.
-
+- Batch convert .ra and .rm files to .mp3
+- Automatically detects and preserves the original bitrate (via ffprobe)
+- Falls back to 192 kbps when bitrate is unavailable
+- Skips files that fail to convert, with clear error messages
+  
 ## 🔒 License
 
 All tools in this repository are released under the [Creative Commons Zero (CC0) 1.0 License](https://creativecommons.org/publicdomain/zero/1.0/). 
