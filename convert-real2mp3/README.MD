@@ -38,7 +38,7 @@ Make sure the following directories exist:
 │   ├── file1.ra
 │   └── file2.rm
 └── mp3_files/
-```
+````
 
 ---
 
