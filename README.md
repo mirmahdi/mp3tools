@@ -6,14 +6,14 @@ A collection of simple, standalone Python tools for audio processing and file ma
 
 ## 📦 Available Tools
 
-### 🔸 [mp3-metadata-transfer](./mp3-metadata-transfer)
+### 🔸 [mp3-metadata](./mp3-metadata)
 Export and import MP3 ID3 metadata to/from a CSV file.
 
 - Export tags (title, artist, album, genre, etc.) from a folder of `.mp3` files.
 - Modify tags in CSV and re-import them to update the files.
 - Perfect for batch editing or metadata backups.
 
-### 🔸 [real-to-mp3-converter](./real-to-mp3-converter)
+### 🔸 [rm2-to-mp3](./rm2-to-mp3)
 Convert RealAudio (`.ra`, `.rm`) files into standard `.mp3` format using `pydub` and FFmpeg.
 
 - Auto-processes a folder of RealAudio files.
