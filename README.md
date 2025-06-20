@@ -13,6 +13,8 @@ Export and import MP3 ID3 metadata to/from a CSV file.
 - Modify tags in CSV and re-import them to update the files.
 - Perfect for batch editing or metadata backups.
 
+### 🔸 [mp4-to-mp3](./mp4-to-mp3)
+
 ### 🔸 [rm2-to-mp3](./rm2-to-mp3)
 Convert RealAudio (`.ra`, `.rm`) files into standard `.mp3` format using `pydub` and FFmpeg.
 
